@@ -17,3 +17,6 @@ RUN docker-php-ext-install pdo_mysql \
 RUN curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar && \
     cp phpcs.phar /usr/local/bin/phpcs && \
     chmod +x /usr/local/bin/phpcs
+
+RUN docker-phalcon-install-devtools \
+    && phalcon
